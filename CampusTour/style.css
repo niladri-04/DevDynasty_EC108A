@@ -222,3 +222,47 @@ ul li a {
     padding-top: 5px;
     transition: 0.3s ease;
 }
+/* added for contact from */
+:root {
+    --main-color: #647bff;
+    --body-color: #090a1a;
+    --container-color: #171b3c;
+    --heading-color: #222231;
+    --box-color: #0d0f26;
+    --bg-color: #fff;
+  }
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    row-gap: 1rem;
+    
+  }
+  .contact-form input,
+  .contact-form textarea {
+    border: tomato;
+    outline: turquoise;
+    font-size: 0.9rem;
+    padding: 15px;
+    color: var(--bg-color);
+    background: var(--box-color);
+    border-radius: 0.4rem;
+  }
+  .contact-form .send-btn {
+    width: 120px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 12px;
+    background: var(--main-color);
+    cursor: pointer;
+  }
+  .contact-form .send-btn:hover {
+    background: #546eff;
+    transition: o.3s all linear;
+  }
+.visible{
+    opacity: 1;
+}

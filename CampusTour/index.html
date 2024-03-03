@@ -7,7 +7,6 @@
 </head>
 
 <body>
-
     <div class="main">
         <div class="navbar">
             <div class="icon">
@@ -17,10 +16,9 @@
             <div class="menu">
                 <ul>
                     <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">CAMPUS TOUR</a></li>
-
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="https://aot.edu.in/about-aot/">ABOUT</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=O_u78qBmUuo" id="btn" onclick="togglebtn()">CAMPUS TOUR</a></li>
+                    <li><a href="https://aot.edu.in/contact-us/">CONTACT</a></li>
                 </ul>
             </div>
 
@@ -30,18 +28,45 @@
             </div>
 
         </div>
-        <div class="content">
-            <h1>Academy of Technology Campus <br><span>TOUR</span> <br>WEBSITE</h1>
-            <p class="par">Welcome to Academy of Technology Campus here you find best teacher , best campus facilities
-                and ragging free campus
+        <div class="content" id="cont">
+            <h1>AOT CAMPUS <br><span>TOUR</span> <br>WEBSITE</h1>
+            <p class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt neque
+                expedita atque eveniet <br> quis nesciunt. Quos nulla vero consequuntur, fugit nemo ad delectus
+                <br> a quae totam ipsa illum minus laudantium?
             </p>
 
-            <button class="cn"><a href="#">JOIN US</a></button>
+            <button class="cn" id="contact-btn"><a href="#">JOIN US</a></button>
         </div>
+        <section class="contact container" id="contact">
+            <!-- Contact form -->
+            <form action="" class="contact-form" id="contact-form">
+                <input type="text" placeholder="Your Name" class="name" required>
+                <input type="email" name=" " id=" " placeholder=" Email address..." class="email" required>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Write reason of join here..." class="message"
+                    required></textarea>
+                <input type="submit" value="Send" class="send-btn">
+            </form>
+        </section>
     </div>
-    </div>
-    </div>
+    
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
-
+<script>
+    const contactBtn = document.getElementById("contact-btn");
+    const contactContainer = document.getElementById("contact");    
+    function toggleContact(){
+        if(contactContainer.style.display ===
+        "none"){  //if the display property of contactContainer is none, then make it block
+            contactContainer.style.display= "block";
+            contactBtn.innerHTML = "<ion-icon name='close'></ion-icon>";   //change the icon to close icon from menu
+            contactBtn.innerHTML = "<ion-icon name='close'></ion-icon>";   //change button icon to close when clicked
+            contactBtn.innerHTML = "<ion-icon name='close'></ion-icon>";   //change button icon to close icon
+        }else {
+            contactContainer.style.display = "none";      //otherwise hide the contactContainer
+            contactBtn.innerHTML = "<ion-icon name='chatbubble-outline'></ion-icon>" ;//and change the button icon back to chatbubble outline icon
+            contactBtn.innerHTML = "<ion-icon name='chatbubble-outline'></ion-icon>" ;//and change the button icon to chatbubble outline icon
+            contactBtn.innerHTML = "<ion-icon name='chatbubble-outline'></ion-icon>" ;//and change the button icon to chatbubble outline icon
+        }}
+        contactBtn.addEventListener('click',toggleContact);//add event listener for click on contactBtn
+</script>
 </html>
